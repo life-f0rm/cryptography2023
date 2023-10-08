@@ -30,7 +30,7 @@ def find_repeated_sequences(cipher_text: str, seq_length: int) -> dict:
 
     return repeated_sequences
 
-def find_gcd_of_kaski(kaski_seq: dict):
+def find_gcd_of_kasiski(kasiski_seq: dict):
     """
     Find the greatest common divisor (GCD) of a list of numbers.
 
@@ -40,9 +40,9 @@ def find_gcd_of_kaski(kaski_seq: dict):
     Returns:
         int: The greatest common divisor of the numbers in the list.
     """
-    gcd_list = kaski_seq
-    for item in kaski_seq:
-        gcd_list[item] = (reduce(gcd, kaski_seq[item]))
+    gcd_list = kasiski_seq
+    for item in kasiski_seq:
+        gcd_list[item] = (reduce(gcd, kasiski_seq[item]))
     
     return gcd_list
 
@@ -59,6 +59,6 @@ GITDKEIHTGSRGAAUXVQEEGVFECXMGOHMWVKOAZEANQ""".replace("\n", "")
 
 # Length of sequence to look for
 for seq in range(5, 2, -1):
-    kaski_seq = find_repeated_sequences(cipher_text, seq)
-    print(f"For {seq} repeated chars: ", kaski_seq)
-    print(f"For {seq} character group GCD: ", find_gcd_of_kaski(kaski_seq))
+    kasiski_seq = find_repeated_sequences(cipher_text, seq)
+    print(f"For {seq} repeated chars: ", kasiski_seq)
+    print(f"For {seq} character group GCD: ", find_gcd_of_kasiski(kasiski_seq))
