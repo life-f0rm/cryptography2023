@@ -1,5 +1,6 @@
-#Reference https://www.geeksforgeeks.org/python-program-for-basic-and-extended-euclidean-algorithms-2/
-#Rference https://www.geeksforgeeks.org/multiplicative-inverse-under-modulo-m/
+# Reference https://www.geeksforgeeks.org/python-program-for-basic-and-extended-euclidean-algorithms-2/
+# Rference https://www.geeksforgeeks.org/multiplicative-inverse-under-modulo-m/
+# Reference https://www.educative.io/answers/what-is-extended-euclidean-algorithm
 def extended_gcd(a, b):
     """
     Compute the Extended Euclidean Algorithm for a and b.
