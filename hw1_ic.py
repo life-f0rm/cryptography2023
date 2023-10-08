@@ -110,6 +110,6 @@ keys = [len2, len3, len4, len5, len6, len7, len8, len9, len10]
 
 for key in range(len(keys)):
     key_set = keys[key]
-    print(f"\nIC's for key length {key+2}:")
+    print('\n')
     for y in range(len(key_set)):
-        print(f"IC for Y{y}:", calculate_ic(key_set[y]))
+        print(f"IC for key length {key+2} Y{y}:", calculate_ic(key_set[y]))
