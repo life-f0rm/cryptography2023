@@ -67,8 +67,8 @@ def combine_keys(k1, k2, length):
 
 # Example keys and message
 k1 = "ABC"
-k2 = "DE"
-message = "ABC"
+k2 = "DEFG"
+message = "CRYPTOGRAPHY IS FUN"
 
 # Calculate LCM of the lengths of K1 and K2
 length_lcm = lcm(len(k1), len(k2))

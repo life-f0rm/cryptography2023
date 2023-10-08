@@ -44,7 +44,7 @@ def mod_inverse(a: int, m: int) -> int:
         return x % m
 
 # Test the function
-a = 25
+a = 19
 m = 97
 inverse = mod_inverse(a, m)
 print("The modular multiplicative inverse of {} modulo {} is {}".format(a, m, inverse))
