@@ -24,7 +24,7 @@ def unicity_distance_of_affine_cipher(n: int = 26, r: float = 1.8) -> float:
 
     Example:
         >>> unicity_distance_of_affine_cipher(26, 1.8)
-        8.285402218862249
+        2.8566021100319263
     """
     
     # Step 1: Find the cardinality 'K' for the Affine cipher key space of the defined alphabet size
@@ -107,4 +107,4 @@ if input("Run with default values (language rate, r = 1.8, alphabet size, n = 26
     n = int(input("Enter alphabet size: "))
     unicity_distance_of_affine_cipher(n, r)
 else:
-    unicity_distance_of_affine_cipher()
+    print(unicity_distance_of_affine_cipher())
