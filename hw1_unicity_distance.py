@@ -6,7 +6,8 @@ import math
 
 def unicity_distance_of_affine_cipher(n: int = 26, r: float = 1.8) -> float:
     """
-    Calculates the unicity distance of an Affine cipher.
+    Calculates the unicity distance of an Affine cipher. U = H / D, D = (R - r)
+    U - Unicity distance, H - entropy of key space, R - alphabet size, r - language rate.
 
     Args:
         n: The size of the alphabet used in the cipher. Defaults to 26.
