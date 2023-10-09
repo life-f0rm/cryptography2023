@@ -6,6 +6,8 @@ def lcm(a, b):
 
 # Function to encrypt using Vigenere cipher
 # Reference: https://www.geeksforgeeks.org/vigenere-cipher/
+# Reference: https://stackoverflow.com/questions/25621544/make-1-key-from-2-vigenere-keys
+
 def vigenere_encrypt(plaintext: str, key: str) -> str:
     """
     Encrypts the plaintext using the Vigenere cipher algorithm with the provided key.
@@ -22,7 +24,7 @@ def vigenere_encrypt(plaintext: str, key: str) -> str:
     # Iterate over each character in the plaintext
     for i in range(len(plaintext)):
         # Calculate the shift value using the key
-        shift = ord(key[i % len(key)]) - ord('A')
+        shift = ord(key[i % len(key)]) - 65 # Take ascii value of letter from i modulu length of key. substract 65 eq. ord('A)
         
         # Encrypt the character using the Vigenere cipher algorithm
         encrypted_char = chr(((ord(plaintext[i]) - ord('A') + shift) % 26) + ord('A'))
