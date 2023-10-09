@@ -1,6 +1,7 @@
 # Reference https://www.geeksforgeeks.org/python-program-for-basic-and-extended-euclidean-algorithms-2/
 # Rference https://www.geeksforgeeks.org/multiplicative-inverse-under-modulo-m/
 # Reference https://www.educative.io/answers/what-is-extended-euclidean-algorithm
+
 def extended_gcd(a, b):
     """
     Compute the Extended Euclidean Algorithm for a and b.
@@ -49,3 +50,4 @@ a = 19
 m = 97
 inverse = mod_inverse(a, m)
 print(f"The modular multiplicative inverse of {a} modulo {m} is {inverse}")
+print(f"Verify: pow({a}, -1, {m}) == mod_inverse({a}, {m}) is: ", pow(19, -1, 97) == inverse)
