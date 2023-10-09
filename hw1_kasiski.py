@@ -21,12 +21,12 @@ def find_repeated_sequences(cipher_text: str, seq_length: int) -> dict:
     sequences = defaultdict(list)
 
     # Find repeated sequences and their positions
-    for i in range(len(cipher_text) - seq_length + 1):
-        seq = cipher_text[i:i+seq_length]
-        sequences[seq].append(i)
+    for i in range(len(cipher_text) - seq_length + 1): # Exmaple if cipertext is 200 chars - seq is 5 + 1: i = 0 - (201 - 5 + 1) = 197
+        seq = cipher_text[i:i+seq_length] # Extract characters from index to index + sequence eq: 0:4 = 5 chars
+        sequences[seq].append(i) # Append every character group into dictionary
     
     # Filter out sequences that do not repeat
-    repeated_sequences = {k: v for k, v in sequences.items() if len(v) > 1}
+    repeated_sequences = {k: v for k, v in sequences.items() if len(v) > 1} # Only keep sequences that repeat more than once.
 
     return repeated_sequences
 
@@ -40,9 +40,9 @@ def find_gcd_of_kasiski(kasiski_seq: dict):
     Returns:
         int: The greatest common divisor of the numbers in the list.
     """
-    gcd_list = kasiski_seq
-    for item in kasiski_seq:
-        gcd_list[item] = (reduce(gcd, kasiski_seq[item]))
+    gcd_list = kasiski_seq # Copy origanl list to gcd_list
+    for item in kasiski_seq: # Iterate through list
+        gcd_list[item] = (reduce(gcd, kasiski_seq[item])) # Find gcd of multiple numbers use reduce function ex: [5, 10, 15] = 5
     
     return gcd_list
 
