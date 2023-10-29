@@ -10,6 +10,7 @@ def np(num:str) -> str:
     """
     #Number padding
     return num + ' ' if len(num) == 1 else num
+
 def vigenere_debug(plaintext: str, key: str):
     """
     Generates a debug table for the Vigenere cipher.
