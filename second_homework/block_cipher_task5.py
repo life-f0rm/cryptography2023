@@ -42,7 +42,7 @@ def decrypt(k, c):
     - list of ints: The decrypted plaintext blocks.
     """
     
-    r_0 = 0b10  # A mock 2-bit IV for simplicity
+    r_0 = c[0]  # A mock 2-bit IV for simplicity
     plaintext = []
 
     r_prev = r_0
