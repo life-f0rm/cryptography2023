@@ -2,7 +2,7 @@ def permute(binary_string: int, key: tuple) -> str:
     """
     Generate a permutation of a binary string based on a key.
 
-    Args:
+    Params:
         binary_string (int): The binary string to permute.
         key (tuple): The key used to determine the permutation.
 
@@ -18,7 +18,7 @@ def get_letter_int(letter:str) -> int:
     """
     Calculate the integer value of a given letter.
 
-    Args:
+    Params:
         letter (str): The uppercase letter to convert to an integer.
 
     Returns:
@@ -30,7 +30,7 @@ def get_letter_bin(letter:int) -> str:
     """
     Converts an integer representing a letter into a binary string.
 
-    Parameters:
+    Params:
         letter (int): The integer representing the letter.
 
     Returns:
@@ -42,7 +42,7 @@ def encrypt_in_ofb_mode(plaintext, key, iv):
     """
     Encrypts the given plaintext using the Output Feedback (OFB) mode.
     
-    Args:
+    Params:
         plaintext (str): The plaintext to be encrypted.
         key (str): The encryption key.
         iv (str): The initialization vector.
@@ -92,7 +92,7 @@ def decrypt_in_ofb_mode(ciphertext, key, iv):
     """
     Decrypts the given ciphertext using the Output Feedback (OFB) mode.
 
-    Args:
+    Params:
         ciphertext (str): The ciphertext to be decrypted.
         key (str): The key used for decryption.
         iv (str): The initialization vector used for encryption.

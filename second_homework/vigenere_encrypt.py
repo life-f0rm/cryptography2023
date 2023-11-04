@@ -7,7 +7,7 @@ def vigenere_encrypt(plaintext: str, key: str) -> str:
     Encrypts the plaintext using the Vigenere cipher algorithm with the provided key.
     To debug use vigenere_debug.py
 
-    Args:
+    Params:
         plaintext (str): The text to be encrypted.
         key (str): The key to be used for encryption.
 

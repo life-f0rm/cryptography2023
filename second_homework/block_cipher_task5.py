@@ -1,13 +1,18 @@
 def encrypt(k, m):
     """
     For sake of simplicity we use 2-bit key and plaintext blocks.
+    Encryption box will just XOR plaintext block with key.
     
-    Args:
-    - k (int): A demo 2-bit encryption key. 
-    - m (list of ints): A list of 2-bit integers as plaintext blocks.
+    Params:
+        k (int): A demo 2-bit encryption key. 
+        m (list of ints): A list of 2-bit integers as plaintext blocks.
 
     Returns:
-    - list of ints: The encrypted ciphertext blocks.
+        list of ints: The encrypted ciphertext blocks.
+    
+    Example:
+        >>> encrypt(0b01, [0b10, 0b11, 0b00])
+        [10, 01, 01, 11]
     """
     
     # 1. Generate IV
@@ -32,14 +37,18 @@ def encrypt(k, m):
 
 def decrypt(k, c):
     """
-    Decrypts a list of 2-bit ciphertext blocks using the provided 2-bit key.
+    Decrypts a list of 2-bit ciphertext blocks using the provided 2-bit key. Reverse for encryption.
 
-    Args:
-    - k (int): A demo decryption key.
-    - c (list of ints): A list of 2-bit integers as ciphertext blocks.
+    Params:
+        k (int): A demo decryption key.
+        c (list of ints): A list of 2-bit integers as ciphertext blocks.
 
     Returns:
-    - list of ints: The decrypted plaintext blocks.
+        list of ints: The decrypted plaintext blocks.
+    
+    Example:
+        >>> decrypt(0b01, [0b10, 0b01, 0b01, 0b11])
+        [0b10, 0b11, 0b00]
     """
     
     r_0 = c[0]  # A mock 2-bit IV for simplicity

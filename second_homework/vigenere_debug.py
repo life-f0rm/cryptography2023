@@ -2,7 +2,9 @@ def np(num:str) -> str:
     """
     A function that pads a number with a space if it has only one digit.
 
-    Parameters:
+    It's used only for formating the debug table. Example '1' becomes '1 '
+
+    Params:
         num (str): The number to be padded.
 
     Returns:
@@ -14,13 +16,11 @@ def np(num:str) -> str:
 def vigenere_debug(plaintext: str, key: str):
     """
     Generates a debug table for the Vigenere cipher.
+    It will do same operations as vigenere_encrypt.py but output is more verbose.
 
-    Parameters:
-    - `plaintext` (str): The plaintext to be encrypted.
-    - `key` (str): The key used for encryption.
-
-    Returns:
-    - None
+    Params:
+        plaintext (str): The plaintext to be encrypted.
+        key (str): The key used for encryption.
     """
     plain_num = []
     key_txt = []

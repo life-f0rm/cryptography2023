@@ -2,25 +2,36 @@
 def xor(i_1:int, i_2:int) -> int:
     """
     Calculates the bitwise XOR of two integers.
+    Separete block for easier reading.
 
-    Parameters:
+    Params:
         i_1 (int): The first integer.
         i_2 (int): The second integer.
 
     Returns:
         int: The result of the bitwise XOR operation.
+    
+    Example:
+        >>> xor(5, 3)
+        6
+        >>> xor(10, 10)
+        0
     """
     return i_1 ^ i_2
 
 def ib(i:int) -> str:
     """
-    Returns an integer as a beautiful binary string.
+    Returns an integer as a beautiful binary string. This is used for formatting.
     
-    Args:
+    Params:
         i (int): The integer to be converted to a binary string.
         
     Returns:
         str: The beautiful binary string representation of the integer.
+    
+    Example:
+        >>> ib(10)
+        '0000 1010'
     """
     return '{:08b}'.format(i)[:4] + ' ' + '{:08b}'.format(i)[4:]
 
@@ -28,11 +39,17 @@ def bstri(bin:str) -> int:
     """
     Converts a binary string to an integer.
 
-    Args:
+    Params:
         bin (str): The binary string to be converted.
 
     Returns:
         int: The integer representation of the binary string.
+    
+    Examples:
+        >>> bstri("1010")
+        10
+        >>> bstri("1101")
+        13
     """
     return int(bin, 2)
 
@@ -51,7 +68,7 @@ def logic(message:str, key:str, rounds:int = 6, debug:bool = True) -> tuple:
         Li = Ri
 
 
-    Args:
+    Params:
         message (str): The message to be encrypted.
         key (str): The encryption key.
         rounds (int, optional): The number of encryption rounds to perform. Defaults to 6.
@@ -101,10 +118,12 @@ def logic(message:str, key:str, rounds:int = 6, debug:bool = True) -> tuple:
     
     return L_i, R_i
 
+DEBUG = True
+
 message = "0110100110101111"
 key = "01011001"
 rounds = 6
 
-L, R = logic(message, key, rounds)
+L, R = logic(message, key, rounds, debug=DEBUG)
 
 print(f'Ciphertext: {ib(L)} {ib(R)}')
